@@ -1,0 +1,20 @@
+#!/bin/bash
+
+######## INITIALIZATION ########
+LED SETUP
+GET SWITCH_POSITION
+ATTACKMODE HID STORAGE
+
+######## ATTACK ########
+LED ATTACK
+Q GUI r
+Q DELAY 150
+Q STRING https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley
+Q DELAY 500
+Q ENTER
+Q DELAY 2000
+Q SPACE
+Q STRING f
+
+######## FINISH ########
+LED FINISH

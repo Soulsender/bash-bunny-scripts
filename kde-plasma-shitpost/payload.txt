@@ -1,0 +1,105 @@
+#!/bin/bash
+
+######## INITIALIZATION ########
+LED SETUP
+GET SWITCH_POSITION
+ATTACKMODE HID STORAGE
+
+######## ATTACK ########
+LED ATTACK
+REM start actual script
+Q DELAY 2000
+Q ESCAPE
+Q DELAY 100
+Q GUI
+Q STRING terminator
+Q DELAY 500
+Q UPARROW
+Q DOWNARROW
+Q DELAY 500
+Q ENTER
+Q DELAY 1000
+Q STRING "./whatthedogdoin.sh & librewolf https://www.youtube.com/watch?v=l4AvkM_VPIw"
+Q DELAY 500
+Q ENTER
+Q DELAY 3000
+Q GUI UPARROW
+REM Repeat 
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/watch?v=SdmfidIYS84
+Q ENTER
+Q DELAY 200
+REM Repeat thud
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/shorts/PgbrC1AAHM0
+Q ENTER
+Q DELAY 200
+REM Repeat thud
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/shorts/PgbrC1AAHM0
+Q ENTER
+Q DELAY 200
+REM Repeat
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/watch?v=SdmfidIYS84
+Q ENTER
+Q DELAY 200
+REM Repeat
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/watch?v=SdmfidIYS84
+Q ENTER
+Q DELAY 200
+REM Repeat
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/watch?v=SdmfidIYS84
+Q ENTER
+Q DELAY 200
+REM Repeat
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/watch?v=SdmfidIYS84
+Q ENTER
+REM Repeat thud
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/shorts/PgbrC1AAHM0
+Q ENTER
+Q DELAY 200
+REM Repeat
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/watch?v=SdmfidIYS84
+Q ENTER
+Q DELAY 200
+REM Repeat
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/watch?v=SdmfidIYS84
+Q ENTER
+Q DELAY 200
+REM Repeat thud
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/shorts/PgbrC1AAHM0
+Q ENTER
+Q DELAY 200
+REM Repeat
+Q CONTROL t
+Q DELAY 150
+Q STRING https://www.youtube.com/watch?v=SdmfidIYS84
+Q ENTER
+Q DELAY 200
+REM no bitches
+Q CONTROL t
+Q DELAY 150
+Q STRING https://i.kym-cdn.com/entries/icons/original/000/039/393/cover2.jpg
+Q ENTER
+
+######## FINISH ########
+LED FINISH
